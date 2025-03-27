@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive recipe book webpage">
+    <meta name="author" content="Samantha Mayes, Haein Lee, Danny Kim">
+    <meta property="og:title" content="Recipe Book">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Discover delicious recipes in our recipe book.">
+    <meta property="og:url" content="https://github.com/wdd231/teamproject">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Sans+3:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Recipe Finder & Manager</title>
+
+    <style>
+        @keyframes fadeSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content {
+            animation: fadeSlideUp 1.5s ease-out;
+        }
+
+        .hero-button {
+            transition: transform 0.3s ease;
+        }
+
+        .hero-button:hover {
+            transform: scale(1.05);
+        }
+
+        .navbar_menu li a {
+            position: relative;
+        }
+
+        .navbar_menu li a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: #ffffff;
+            transition: width 0.3s ease;
+        }
+
+        .navbar_menu li a:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <img src="images/recipe-book.png" alt="logo">
+            <a href="index.html">Recipe Finder</a>
+        </div>
+        <ul class="navbar_menu">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Recipes</a>
+                <ul class="dropdown_menu">
+                    <li><a href="breakfast.html">Breakfast</a></li>
+                    <li><a href="lunch.html">Lunch</a></li>
+                    <li><a href="dinner.html">Dinner</a></li>
+                </ul>
+            </li>
+            <li><a href="personal-recipes.html">My Recipes</a></li>
+            <li><a href="add-recipe.html">Add Recipe</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with animation -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover & Share Amazing Recipes</h1>
+            <p>Find delicious recipes or add your own to our growing collection.</p>
+            <a href="recipes.html" class="hero-button">Find Recipes</a>
+            <a href="add-recipe.html" class="hero-button secondary">Add Recipe</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Recipe Finder. All Rights Reserved.</p>
+        <ul class="footer_icons">
+            <li><i class="fa-brands fa-facebook"></i></li>
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-twitter"></i></li>
+        </ul>
+    </footer>
+
+    <script type="module" src="recipes.js"></script>
+</body>
+
+</html>
